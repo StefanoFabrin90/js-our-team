@@ -68,7 +68,7 @@ function generationCard (card, teamContainer) {
               <h3>${cardItem.Name}</h3>
               <p>${cardItem.position}</p>
             </div>
-          </div>`;
+        </div>`;
     }
 }
 
@@ -99,7 +99,7 @@ btn.addEventListener('click', function() {
 
     // STEP 5: creo una nuova card da inserire nel mio Array
     const newCard = {
-    img: document.getElementById('image').value,
+    img: '<img src="img/new-team-member-01.jpg" alt="Wayne Barnett"/>',
     Name: document.getElementById('name').value,
     position: document.getElementById('role').value,
     } 
@@ -107,6 +107,17 @@ btn.addEventListener('click', function() {
     // faccio una prova per vedere se effettivamneti riesco ad inserirlo nel mio Array
     card.push(newCard);
     console.log(card);
+
+    teamContainer.innerHTML += `
+        <div class="team-card">
+            <div class="card-image">
+              ${'<img src="img/new-team-member-01.jpg" alt="Wayne Barnett"/>'}
+            </div>
+            <div class="card-text">
+              <h3>${document.getElementById('name').value}</h3>
+              <p>${document.getElementById('role').value}</p>
+            </div>
+        </div>`;
 });
 
 
