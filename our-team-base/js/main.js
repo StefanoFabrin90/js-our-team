@@ -94,17 +94,20 @@ btn.addEventListener('click', function() {
     // console.log(role);
     // const image = document.getElementById('image').value;
     // console.log(image);
+
+    
+
     // STEP 5: creo una nuova card da inserire le mio Array
-
-
     const newCard = {
     img: document.getElementById('image').value,
     Name: document.getElementById('name').value,
     position: document.getElementById('role').value,
-    }
-    
+    } 
+
     // faccio una prova per vedere se effettivamneti riesco ad inserirlo nel mio Array
     card.push(newCard);
     console.log(card);
 });
+
+
 
