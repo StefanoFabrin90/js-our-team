@@ -8,32 +8,32 @@
 // STEP 1: creo un array per contenere le mie card che a loro volta dovranno essere oggetti perche dovranno contenere: img,name,ruolo
 const card = [
     {
-        img: './img/wayne-barnett-founder-ceo.jpg',
+        img: '<img src="img/wayne-barnett-founder-ceo.jpg" alt="Wayne Barnett"/>',
         Name: 'Wayne Barnett',
         position: 'Founder & CEO',
     },
     {
-        img: './img/angela-caroll-chief-editor.jpg',
+        img: '<img src="img/angela-caroll-chief-editor.jpg" alt="Wayne Barnett"/>',
         Name: 'Angela Caroll',
         position: 'Chief editor',
     },
     {
-        img: './img/angela-lopez-social-media-manager.jpg',
+        img: '<img src="img/angela-lopez-social-media-manager.jpg" alt="Wayne Barnett"/>',
         Name: 'Angela Lopez',
         position: 'Social Media Manager',
     },
     {
-        img: './img/barbara-ramos-graphic-designer.jpg',
+        img: '<img src="img/barbara-ramos-graphic-designer.jpg" alt="Wayne Barnett"/>',
         Name: 'Barbara Ramos',
         position: 'Graphic Designer',
     },
     {
-        img: './img/walter-gordon-office-manager.jpg',
+        img: '<img src="img/walter-gordon-office-manager.jpg" alt="Wayne Barnett"/>',
         Name: 'Walter Gordon',
         position: 'Office Manager',
     },
     {
-        img: './img/scott-estrada-developer.jpn',
+        img: '<img src="img/scott-estrada-developer.jpg" alt="Wayne Barnett"/>',
         Name: 'Scott Estrada',
         position: 'Developer',
     },
@@ -46,8 +46,12 @@ const teamContainer = document.querySelector('.team-container');
 console.log(teamContainer);
 
 
-// STEP 3: attraverso una funzione che al suo interno avra un for andro a creare contenuto all'interno del mio container
+// richiamo la funzione appena creata
+generationCard (card, teamContainer);
 
+
+// STEP 3: attraverso una funzione che al suo interno avra un for andro a creare contenuto all'interno del mio container
+function generationCard (card, teamContainer) {
     for (let i = 0; i < card.length; i++){
         // inseriesco il valore in una costante per non ripeter card[i];
         const cardItem = card[i];
@@ -66,4 +70,4 @@ console.log(teamContainer);
             </div>
           </div>`;
     }
-
+}
