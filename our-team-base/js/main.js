@@ -71,3 +71,13 @@ function generationCard (card, teamContainer) {
           </div>`;
     }
 }
+
+// STEP 4: creo una nuova card da inserire le mio Array
+const newCard = {
+    img: '<img src="img/new-team-member-01" alt="Wayne Barnett"/>',
+    Name: 'Luca Rossi',
+    position: 'Sviluppatore',
+}
+
+// faccio una prova per vedere se effettivamneti riesco ad inserirlo nel mio Array
+// card.push(newCard); --> funziona 
