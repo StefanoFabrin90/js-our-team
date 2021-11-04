@@ -72,30 +72,39 @@ function generationCard (card, teamContainer) {
     }
 }
 
-// STEP 4: creo una nuova card da inserire le mio Array
-const newCard = {
-    img: '<img src="img/new-team-member-01" alt="Wayne Barnett"/>',
-    Name: 'Luca Rossi',
-    position: 'Sviluppatore',
-}
-// faccio una prova per vedere se effettivamneti riesco ad inserirlo nel mio Array
-// card.push(newCard); --> funziona 
 
 
 
 
-// STEP 5: Utilizziamo poi gli input presenti nella pagina per permettere all’utente di aggiungere nuovi membri del team.
+
+// STEP 4: Utilizziamo poi gli input presenti nella pagina per permettere all’utente di aggiungere nuovi membri del team.
 
 // creo l'evento del bottone 
 const btn = document.getElementById('addMemberButton');
 
 btn.addEventListener('click', function() {
     // console.log('click');
+
+
     // ora devo ottenere i valori dall utente
-    const nome = document.getElementById('name').value;
-    console.log(nome);
-    const role = document.getElementById('role').value;
-    console.log(role);
-    const image = document.getElementById('image').value;
-    console.log(image);
+    // let nome = document.getElementById('name').value;
+    // console.log(nome);
+    // let newMember = nome
+    // const role = document.getElementById('role').value;
+    // console.log(role);
+    // const image = document.getElementById('image').value;
+    // console.log(image);
+    // STEP 5: creo una nuova card da inserire le mio Array
+
+
+    const newCard = {
+    img: document.getElementById('image').value,
+    Name: document.getElementById('name').value,
+    position: document.getElementById('role').value,
+    }
+    
+    // faccio una prova per vedere se effettivamneti riesco ad inserirlo nel mio Array
+    card.push(newCard);
+    console.log(card);
 });
+
