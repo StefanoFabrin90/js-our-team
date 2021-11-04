@@ -82,26 +82,24 @@ function generationCard (card, teamContainer) {
 // creo l'evento del bottone 
 const btn = document.getElementById('addMemberButton');
 
+// ora devo ottenere i valori dall utente
+    const nome = document.getElementById('name').value;
+    console.log(nome);
+    const newMember = nome
+    const role = document.getElementById('role').value;
+    console.log(role);
+    const image = document.getElementById('image').value;
+    console.log(image);
+
+
 btn.addEventListener('click', function() {
     // console.log('click');
-
-
-    // ora devo ottenere i valori dall utente
-    // let nome = document.getElementById('name').value;
-    // console.log(nome);
-    // let newMember = nome
-    // const role = document.getElementById('role').value;
-    // console.log(role);
-    // const image = document.getElementById('image').value;
-    // console.log(image);
-
-
 
     // STEP 5: creo una nuova card da inserire nel mio Array
     const newCard = {
     img: '<img src="img/new-team-member-01.jpg" alt="Wayne Barnett"/>',
-    Name: document.getElementById('name').value,
-    position: document.getElementById('role').value,
+    Name: nome,
+    position: role,
     } 
 
     // faccio una prova per vedere se effettivamneti riesco ad inserirlo nel mio Array
@@ -114,8 +112,8 @@ btn.addEventListener('click', function() {
               ${'<img src="img/new-team-member-01.jpg" alt="Wayne Barnett"/>'}
             </div>
             <div class="card-text">
-              <h3>${document.getElementById('name').value}</h3>
-              <p>${document.getElementById('role').value}</p>
+              <h3>${nome}</h3>
+              <p>${role}</p>
             </div>
         </div>`;
 });
