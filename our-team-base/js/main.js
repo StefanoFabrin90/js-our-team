@@ -78,6 +78,24 @@ const newCard = {
     Name: 'Luca Rossi',
     position: 'Sviluppatore',
 }
-
 // faccio una prova per vedere se effettivamneti riesco ad inserirlo nel mio Array
 // card.push(newCard); --> funziona 
+
+
+
+
+// STEP 5: Utilizziamo poi gli input presenti nella pagina per permettere all’utente di aggiungere nuovi membri del team.
+
+// creo l'evento del bottone 
+const btn = document.getElementById('addMemberButton');
+
+btn.addEventListener('click', function() {
+    // console.log('click');
+    // ora devo ottenere i valori dall utente
+    const nome = document.getElementById('name').value;
+    console.log(nome);
+    const role = document.getElementById('role').value;
+    console.log(role);
+    const image = document.getElementById('image').value;
+    console.log(image);
+});
