@@ -97,7 +97,7 @@ btn.addEventListener('click', function() {
 
 
 
-    // STEP 5: creo una nuova card da inserire le mio Array
+    // STEP 5: creo una nuova card da inserire nel mio Array
     const newCard = {
     img: document.getElementById('image').value,
     Name: document.getElementById('name').value,
